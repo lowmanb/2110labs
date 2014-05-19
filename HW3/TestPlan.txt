@@ -1,0 +1,14 @@
+# JUnit Testing Rationale #
+
+* addPlayable()
+We created a playlist p and then added all possible types of playlist objects (playlist, song, video) using the addPlayables() method. 
+To test whether these objects were actuallyadded, we checked the name of the playables in their respecitve positions in the playlist p.
+
+* addPlayList()
+We again created a playlist p, but in this test we only added a playlist using the addPlayList() method. To test whether the playist was added, we 
+checked the name of the playlist at index 0 of the playlist p.
+
+* loadMedia()
+To comprehensively test our algorithm, we created a text file "test.dat" that contains all of the cases listed in the program spec. After creating 
+a new playlist p, we called the loadMedia() method on p directing it to "test.dat". To test whether all the playables loaded correctly, we tested the 
+toString() method for all 5 of the playable objects in "test.dat".

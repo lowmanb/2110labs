@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="virginia.edu.cs2110"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="virginia.edu.cs2110.brl2xx.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="virginia.edu.cs2110.brl2xx.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ghost"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="virginia.edu.cs2110.Splash"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="virginia.edu.cs2110.MainMenu"
+            android:label="@string/title_activity_main_menu"
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
+        <activity
+            android:name="virginia.edu.cs2110.Map"
+            android:label="@string/title_activity_map"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC7FxDL37Dk2V4GiTAxjXEKIkL3wC-8Rm8" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="virginia.edu.cs2110.Combat"
+            android:label="@string/title_activity_combat"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Holo.NoActionBar" >
+        </activity>
+        <activity
+            android:name="virginia.edu.cs2110.Help"
+            android:label="@string/title_activity_help"
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
+    </application>
+
+</manifest>
